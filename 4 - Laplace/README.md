@@ -5,8 +5,8 @@ In this simulation the Laplace Equation is used to simulate two different phases
 
 With this equation, the entire system will come to equilibrium. To simulate the phases staying separate the change is multiplied by a dampening variable kappa, as well as subtracted by other variables (based on literature). Therefore, by controlling these variables a "High T" system can be created where the different phases come together, or a "Low T" system can be created where phase separation occurs.
 
-## High T - No Phase Separation
-![High T](https://github.com/CraigLangford/Simulation-Projects/blob/master/4%20-%20Laplace/High%20T.gif)
+## High T - Phases Join
+![High T](https://github.com/CraigLangford/Simulation-Projects/blob/master/4%20-%20Laplace/Phases%20Joining.gif)
 
-## Low T - Phase Separation
-![Low T](https://github.com/CraigLangford/Simulation-Projects/blob/master/4%20-%20Laplace/Low%20T.gif)
+## Low T - Phases Separate
+![Low T](https://github.com/CraigLangford/Simulation-Projects/blob/master/4%20-%20Laplace/Phases%20Separating.gif)
