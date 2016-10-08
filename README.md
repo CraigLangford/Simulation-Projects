@@ -36,4 +36,45 @@ These projects focused on generating various systems in the .xyz format which ca
 
 
 # Dissipative Particle Dynamics (DPD)
-In a DPD system the forces between each particle are calculated and the resulting velocity is then calculated. With each frame the position of the particles are updated. For simplification, if the particle is within the radius distance (<2R) of the other repulsion is created with a linear dependance and the particles are attracted if they
+In a DPD system the forces between each particle are calculated and the resulting velocity is then calculated. With each frame the position of the particles are updated. For simplification, if the particle is within the radius distance (<2R) of the other repulsion is created with a linear dependance and the particles are attracted if theyre further than 2R. Finally, a continuous boundary is used in which a particle exiting one side of the system will appear in the opposing face.
+
+## DPD Simulation
+![DPD Simulation](https://github.com/CraigLangford/Simulation-Projects/blob/master/3-%20DPD%20Simulation/Simulation.gif)
+
+# Laplace Equation
+In this simulation the Laplace Equation is used to simulate two different phases. -1 represents phase A and +1 represents phase B. To calculate the amount of change in value at each point the five point stencil method is used, which incorporates the surrounding 4 points around a point. This is generalized by the Laplacian Equation below:
+
+![Laplacian](https://wikimedia.org/api/rest_v1/media/math/render/svg/def5402aecaf6e3e613d9a879945cc851f3db3c2)
+
+With this equation, the entire system will come to equilibrium. To simulate the phases staying separate the change is multiplied by a dampening variable kappa, as well as subtracted by other variables (based on literature). Therefore, by controlling these variables a "High T" system can be created where the different phases come together, or a "Low T" system can be created where phase separation occurs.
+
+## High T - Phases Join
+![High T](https://github.com/CraigLangford/Simulation-Projects/blob/master/4%20-%20Laplace/Phases%20Joining.gif)
+
+## Low T - Phases Separate
+![Low T](https://github.com/CraigLangford/Simulation-Projects/blob/master/4%20-%20Laplace/Phases%20Separating.gif)
+
+
+# Monte-Carlo Simulation
+In a Monte-Carlo simulation the lowest energy of the system is found. By moving around particles individually one at a time and checking the resulting energy a local minimum can be found. Unfortunately, this local minimum may not be the global minimum. Therefore, in the Monte-Carlo simulation, there is a probability that a moved particle that creates a higher energy system stays in its new position. In this simulation the probability is calculated according to the equation:
+
+![Probability a Particle Stays in Higher Energy Position](https://github.com/CraigLangford/Simulation-Projects/blob/master/5%20-%20Monte%20Carlo%20Simulation/Probability.png)
+
+Where it can be seen that the higher the energy change, the lower the probability the particle will stay in the new higher energy position. The resulting simulation is as follows.
+
+## Monte-Carlo Simulation
+![Monte-Carlo Simulation](https://github.com/CraigLangford/Simulation-Projects/blob/master/5%20-%20Monte%20Carlo%20Simulation/Monte-Carlo%20Simulation.gif)
+
+And finally the energy of the system can be seen to increase as found below. Take note on how the local minima are overcome and a global minimum is found.
+
+![Energy of System](https://github.com/CraigLangford/Simulation-Projects/blob/master/5%20-%20Monte%20Carlo%20Simulation/Energ%20vs%20Time.png)
+
+
+# Two Phase DPD Project
+In this project a much more complex DPD system was created utilizing two types of particles. In this method particles were attracted to themselves more than their opposing type. As a result the like particles should clump. As seen below it is difficult to tell whether the particles are clumping.
+
+![All](https://github.com/CraigLangford/Simulation-Projects/blob/master/6%20-%20Final%20Complex%20DPD%20Project/All.gif)
+
+However, by only visualizing one type of particle, it is very easy to see the grouping of the particles to create small pockets in the system.
+
+![Just Particles A](https://github.com/CraigLangford/Simulation-Projects/blob/master/6%20-%20Final%20Complex%20DPD%20Project/JustA.gif)
